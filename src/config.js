@@ -47,12 +47,56 @@ export const config = {
   nextButtonText: "NEXT",
   unlockButtonText: "Buka Kejutan 💖",
 
-  // ---- Section 2: Gallery ----
+  // ---- Section 2: Reasons Why I Love You (Hal-Hal yang Bikin Jatuh Cinta) ----
+  reasonsTitle: "Hal-Hal Kecil yang Bikin Aku Jatuh Cinta",
+  reasonsSubtitle:
+    "Ketuk tiap kartu untuk membuka hal-hal tentangmu yang selalu bikin hatiku hangat ✨",
+  reasonsNextButton: "Buka Galeri Foto 📸",
+  reasonsList: [
+    {
+      id: 1,
+      title: "Manjamu yang Menggemaskan",
+      text: "Manjamu itu juara banget. Bukan cuma bikin gemas, tapi bikin aku merasa dibutuhkan dan hari-hariku jadi jauh lebih hangat.",
+      emoji: "🥺",
+    },
+    {
+      id: 2,
+      title: "Support System Terbaik",
+      text: "Kamu selalu ada di saat aku capek atau ragu sama diri sendiri. Kata-kata penyemangat dan percayamu itu kekuatan terbesarku.",
+      emoji: "🌟",
+    },
+    {
+      id: 3,
+      title: "Doa Rahasia di Bulan September",
+      text: "Waktu tahu kamu sempat berdoa diam-diam menanyakan apakah aku orangnya sebulan sebelum kutembak... hatiku merinding dan terharu banget.",
+      emoji: "🙏",
+    },
+    {
+      id: 4,
+      title: "Senyum Manis di Kampus",
+      text: "Dari zaman kita cuma saling tahu nama di Tarumanagara, senyummu sudah jadi salah satu pemandangan favoritku di tengah ramainya kampus.",
+      emoji: "✨",
+    },
+    {
+      id: 5,
+      title: "Reaksi Excited 1 Oktober",
+      text: "Muka kaget sekaligus senyum bahagiamu waktu aku nyatain perasaanku... sampai kapanpun momen itu akan selalu hidup di ingatanku.",
+      emoji: "🥰",
+    },
+    {
+      id: 6,
+      title: "Ketulusan Hatimu",
+      text: "Kamu apa adanya, tulus, dan penuh kasih. Bersamamu bikin aku selalu bersemangat untuk belajar jadi laki-laki yang lebih baik setiap hari.",
+      emoji: "🤍",
+    },
+  ],
+
+  // ---- Section 3: Gallery ----
   galleryTitle: "Perjalanan Kita",
   gallerySubtitle: "Baru sebentar, tapi sudah banyak yang ingin kusimpan ✨",
-  galleryNextButton: "Lanjut 💌",
+  galleryNextButton: "Baca Surat Cinta 💌",
 
-  // ---- Section 3: Letter ----
+  // ---- Section 4: Letter ----
   letterSectionTitle: "Surat Untukmu",
 
   letterText: `Untuk Cia, perempuan yang paling kusayangi,
@@ -77,14 +121,52 @@ Selalu milikmu,
 Elvan 💌`,
 
   letterSkipButton: "Lewati animasi",
-  letterNextButton: "Satu kejutan lagi 🎁",
+  letterNextButton: "Ada Kue Untukmu 🎂",
 
-  // ---- Section 4: Closing ----
-  closingTitle: "Terima kasih sudah jadi bagian terbaik dari hidupku",
-  closingCounterPrefix: "Kita sudah bersama",
-  closingCounterSuffix: "hari",
-  closingCounterZero: "Hari pertama kita 💖",
-  closingSubtext: "Baru permulaan, dan aku sudah sebahagia ini.",
+  // ---- Section 5: Birthday Cake & Wish (Tiup Lilin) ----
+  cakeTitle: "Make a Wish, Cia 🎂",
+  cakeSubtitle:
+    "Pejamkan matamu, buat satu permohonan tulus di dalam hati... lalu tiup lilinnya 🕯️✨",
+  cakeBlowButton: "Tiup Lilinnya 💨",
+  cakeWishGrantedTitle: "Permohonanmu Telah Diterbangkan ke Langit 🌟",
+  cakeWishGrantedMessage:
+    "Semoga di usia barumu ini, setiap langkahmu selalu dipeluk berkah, kesehatan, dan kebahagiaan yang berlimpah. Dan semoga aku selalu diizinkan menemanimu mewujudkan mimpi-mimpimu satu per satu. Amin 🤍",
+  cakeNextButton: "Lihat Cerita Kita 💖",
+
+  // ---- Section 6: Closing & Journey ----
+  closingTitle: "Dari 2 Tahun Saling Asing, Menuju Selamanya",
+  closingStoryIntro:
+    "Udah 2 tahun kita saling asing di kampus Tarumanagara, hanya mengenal nama dan tahu satu sama lain dari kejauhan... dan sama sekali nggak pernah menyangka semesta merajut momen seindah ini.",
+  
+  milestones: [
+    {
+      badge: "2024 – 2026",
+      title: "2 Tahun di Kampus",
+      desc: "Hanya orang asing yang tahu nama, berpapasan di lorong tanpa tahu suatu hari kita akan sedekat ini.",
+      icon: "🎓",
+    },
+    {
+      badge: "September 2026",
+      title: "Doa Rahasia Cia",
+      desc: "Di hening malam, kamu berbisik ke Tuhan menanyakan apakah Elvan orang yang tepat.",
+      icon: "🕊️",
+    },
+    {
+      badge: "1 Oktober 2026",
+      title: "Jawaban Doa & Hari Pertama",
+      desc: "Elvan menyatakan perasaan, dan senyum kaget bahagiamu resmi memulai kisah cinta kita.",
+      icon: "💌",
+    },
+    {
+      badge: "27 Oktober 2026",
+      title: "Ulang Tahun Pertamamu Bersamaku",
+      desc: "Hari spesial perempuan favoritku. Awal dari banyak ulang tahun yang akan kita rayakan bersama.",
+      icon: "🎂",
+    },
+  ],
+
+  closingLiveTimerTitle: "Waktu yang sudah kita lewati bersama:",
+  closingSubtext: "Dari hari pertama sampai detik ini, aku selalu bersyukur memilikimu.",
   closingSendButton: "Kirim Peluk & Cium ke Cowokmu 💌",
   closingSentMessages: [
     "Pelukan dan ciumanmu sudah sampai ke Elvan 🥹💕",
@@ -96,12 +178,7 @@ Elvan 💌`,
   closingReplayButton: "Putar ulang dari awal 🔁",
 
   // ---- Caption Foto ----
-  // Key = nama file (mis. "foto-01.jpg"), Value = caption
-  // Jika tidak diisi, caption default yang manis akan ditampilkan otomatis.
-  photoCaptions: {
-    // "foto-01.jpg": "Pertama kali kita ketemu di kampus",
-    // "foto-02.jpg": "Senyummu yang bikin aku jatuh hati",
-  },
+  photoCaptions: {},
 };
 
 // Caption default yang manis dan bervariasi

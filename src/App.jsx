@@ -2,12 +2,13 @@ import { useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Intro from "./components/Intro";
 import LoveMeter from "./components/LoveMeter";
+import Reasons from "./components/Reasons";
 import Gallery from "./components/Gallery";
 import Letter from "./components/Letter";
+import BirthdayCake from "./components/BirthdayCake";
 import Closing from "./components/Closing";
 import MusicPlayer from "./components/MusicPlayer";
 import FloatingHearts from "./components/FloatingHearts";
-
 
 const pageVariants = {
   initial: { opacity: 0, scale: 0.95, y: 30 },
@@ -27,7 +28,7 @@ export default function App() {
 
   const goTo = useCallback((page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   const startMusic = useCallback(() => {
@@ -66,7 +67,21 @@ export default function App() {
             transition={pageTransition}
             className="min-h-[100dvh] flex items-center justify-center"
           >
-            <LoveMeter onNext={() => goTo("gallery")} />
+            <LoveMeter onNext={() => goTo("reasons")} />
+          </motion.div>
+        );
+      case "reasons":
+        return (
+          <motion.div
+            key="reasons"
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={pageTransition}
+            className="min-h-[100dvh] flex items-center justify-center"
+          >
+            <Reasons onNext={() => goTo("gallery")} />
           </motion.div>
         );
       case "gallery":
@@ -94,7 +109,21 @@ export default function App() {
             transition={pageTransition}
             className="min-h-[100dvh] flex items-center justify-center"
           >
-            <Letter onNext={() => goTo("closing")} />
+            <Letter onNext={() => goTo("cake")} />
+          </motion.div>
+        );
+      case "cake":
+        return (
+          <motion.div
+            key="cake"
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={pageTransition}
+            className="min-h-[100dvh] flex items-center justify-center"
+          >
+            <BirthdayCake onNext={() => goTo("closing")} />
           </motion.div>
         );
       case "closing":
@@ -117,7 +146,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden min-h-[100dvh]">
       {currentPage !== "intro" && <FloatingHearts />}
       <MusicPlayer shouldPlay={musicStarted} />
       <AnimatePresence mode="wait">{renderPage()}</AnimatePresence>
