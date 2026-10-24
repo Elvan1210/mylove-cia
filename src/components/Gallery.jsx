@@ -63,24 +63,26 @@ export default function Gallery({ onNext }) {
     skipSnaps: false,
   });
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
-
   useEffect(() => {
     if (!emblaApi) return;
-    onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
+    const syncState = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+      setScrollSnaps(emblaApi.scrollSnapList());
     };
-  }, [emblaApi, onSelect]);
+
+    // Sync on next tick after embla is initialized
+    const rafId = requestAnimationFrame(syncState);
+    emblaApi.on("select", syncState);
+    emblaApi.on("reInit", syncState);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      emblaApi.off("select", syncState);
+      emblaApi.off("reInit", syncState);
+    };
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();

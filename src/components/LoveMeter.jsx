@@ -145,13 +145,17 @@ export default function LoveMeter({ onNext }) {
 
   // Slider change handler
   const handleSliderChange = (e) => {
-    setLoveValue(Number(e.target.value));
+    const val = Number(e.target.value);
+    setLoveValue(val);
+    if (val < 100) {
+      setIsEasterEgg(false);
+      setIsEvaded(false);
+    }
   };
 
   // Confetti when reaching 100
   useEffect(() => {
     if (loveValue === 100) {
-      setIsEvaded(false);
       if (!hasFiredConfetti.current) {
         hasFiredConfetti.current = true;
         confetti({
@@ -178,17 +182,12 @@ export default function LoveMeter({ onNext }) {
           colors: ["#F9D5DC", "#B76E79", "#C8102E", "#FCE8EC"],
         });
       }, 3000);
-    } else {
-      if (easterEggTimerRef.current) {
-        clearTimeout(easterEggTimerRef.current);
-        easterEggTimerRef.current = null;
-      }
-      setIsEasterEgg(false);
     }
 
     return () => {
       if (easterEggTimerRef.current) {
         clearTimeout(easterEggTimerRef.current);
+        easterEggTimerRef.current = null;
       }
     };
   }, [loveValue]);

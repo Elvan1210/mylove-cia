@@ -8,7 +8,6 @@ import Closing from "./components/Closing";
 import MusicPlayer from "./components/MusicPlayer";
 import FloatingHearts from "./components/FloatingHearts";
 
-const pages = ["intro", "lovemeter", "gallery", "letter", "closing"];
 
 const pageVariants = {
   initial: { opacity: 0, scale: 0.95, y: 30 },

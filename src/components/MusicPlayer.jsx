@@ -126,12 +126,21 @@ export default function MusicPlayer({ shouldPlay = false }) {
     }
   }, [isPlaying, fadeInVolume]);
 
+  const musicSrc = (() => {
+    if (!config.musicFile) return "";
+    if (config.musicFile.startsWith("http://") || config.musicFile.startsWith("https://")) {
+      return config.musicFile;
+    }
+    const cleanPath = config.musicFile.replace(/^\/+/, "");
+    return `${import.meta.env.BASE_URL}${cleanPath}`;
+  })();
+
   return (
     <>
       {/* Hidden audio element */}
       <audio
         ref={audioRef}
-        src={config.musicFile}
+        src={musicSrc}
         loop
         preload="auto"
         onPlay={() => setIsPlaying(true)}

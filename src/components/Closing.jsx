@@ -31,9 +31,11 @@ const CONFETTI_COLORS = ['#F9D5DC', '#B76E79', '#C8102E', '#ff69b4'];
 
 export default function Closing({ onReplay }) {
   // Day counter calculation
-  const now = new Date(new Date().toLocaleString('en-US', { timeZone: config.timezone }));
-  const anniversary = new Date(config.anniversaryDate + 'T00:00:00');
-  const days = Math.floor((now - anniversary) / (1000 * 60 * 60 * 24));
+  const [days] = useState(() => {
+    const now = new Date(new Date().toLocaleString('en-US', { timeZone: config.timezone }));
+    const anniversary = new Date(config.anniversaryDate + 'T00:00:00');
+    return Math.floor((now - anniversary) / (1000 * 60 * 60 * 24));
+  });
 
   const [displayCount, setDisplayCount] = useState(0);
   const [messageIndex, setMessageIndex] = useState(0);

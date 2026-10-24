@@ -5,7 +5,7 @@
 // ============================================================
 
 import sharp from "sharp";
-import { readdir, mkdir, copyFile } from "fs/promises";
+import { readdir, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -51,7 +51,7 @@ async function getExifDate(filePath) {
   return null;
 }
 
-async function processPhoto(inputPath, outputName, index) {
+async function processPhoto(inputPath, outputName, _index) {
   const outputPath = path.join(OUTPUT_DIR, outputName);
   const thumbPath = path.join(THUMB_DIR, outputName);
 
