@@ -107,7 +107,7 @@ Setiap foto di galeri menampilkan bingkai ala Polaroid dengan tulisan tangan (*D
 2. Temukan bagian `photoCaptions`:
    ```javascript
    photoCaptions: {
-     "foto-01.jpg": "Pertama kali kita ketemu di kampus Tarumanagara ✨",
+     "foto-01.jpg": "Pertama kali kita ketemu di kampus Untar ✨",
      "foto-02.jpg": "Senyum manis favoritku selamanya 💕",
      "foto-03.jpg": "Momen sederhana yang selalu bikin kangen 🌸",
      "foto-04.jpg": "Waktu kamu manja dan selalu minta ditemani 🥰",

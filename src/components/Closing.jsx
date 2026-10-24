@@ -27,7 +27,7 @@ const itemVariants = {
   },
 };
 
-const FLOATING_EMOJIS = ["🤗", "💋", "❤️", "🌹", "💕", "✨"];
+const FLOATING_EMOJIS = ["🤗", "🫂", "❤️", "🌹", "💕", "✨"];
 const CONFETTI_COLORS = ["#F9D5DC", "#B76E79", "#C8102E", "#ff69b4", "#FFD700"];
 
 export default function Closing({ onReplay }) {

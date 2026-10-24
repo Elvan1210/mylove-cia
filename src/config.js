@@ -74,7 +74,7 @@ export const config = {
     {
       id: 4,
       title: "Senyum Manis di Kampus",
-      text: "Dari zaman kita cuma saling tahu nama di Tarumanagara, senyummu sudah jadi salah satu pemandangan favoritku di tengah ramainya kampus.",
+      text: "Dari zaman kita cuma saling tahu nama di Untar, senyummu sudah jadi salah satu pemandangan favoritku di tengah ramainya kampus.",
       emoji: "✨",
     },
     {
@@ -105,7 +105,7 @@ Selamat ulang tahun, sayang. 🤍
 
 Hari ini aku ingin berhenti sejenak dan mengucap syukur. Bukan hanya karena usiamu bertambah, tapi karena aku diberi kesempatan untuk merayakannya bersamamu, sebagai pacarmu.
 
-Kita bertemu di Tarumanagara, di tengah hari-hari kampus yang ramai, tanpa tahu bahwa pertemuan sederhana itu akan membawa kita sejauh ini. Kamu yang dulu hanya sebuah nama dan senyuman di antara banyak orang, sekarang jadi salah satu alasan terbesar aku tersenyum.
+Kita bertemu di Untar, di tengah hari-hari kampus yang ramai, tanpa tahu bahwa pertemuan sederhana itu akan membawa kita sejauh ini. Kamu yang dulu hanya sebuah nama dan senyuman di antara banyak orang, sekarang jadi salah satu alasan terbesar aku tersenyum.
 
 Ada banyak hal yang kusukai darimu. Kamu manja, dan jujur saja, aku suka sekali. Manjamu bikin aku merasa dibutuhkan dan membuat hari-hariku lebih hangat. Tapi di balik itu, kamu juga support system terbaik yang pernah kupunya. Kamu hadir, mendengarkan, dan percaya padaku, bahkan di saat aku sendiri belum yakin pada diriku.
 
@@ -136,7 +136,7 @@ Elvan 💌`,
   // ---- Section 6: Closing & Journey ----
   closingTitle: "Dari 2 Tahun Saling Asing, Menuju Selamanya",
   closingStoryIntro:
-    "Udah 2 tahun kita saling asing di kampus Tarumanagara, hanya mengenal nama dan tahu satu sama lain dari kejauhan... dan sama sekali nggak pernah menyangka semesta merajut momen seindah ini.",
+    "Udah 2 tahun kita saling asing di kampus Untar, hanya mengenal nama dan tahu satu sama lain dari kejauhan... dan sama sekali nggak pernah menyangka semesta merajut momen seindah ini.",
   
   milestones: [
     {
@@ -167,13 +167,13 @@ Elvan 💌`,
 
   closingLiveTimerTitle: "Waktu yang sudah kita lewati bersama:",
   closingSubtext: "Dari hari pertama sampai detik ini, aku selalu bersyukur memilikimu.",
-  closingSendButton: "Kirim Peluk & Cium ke Cowokmu 💌",
+  closingSendButton: "Kirim Peluk ke Cowokmu 💌",
   closingSentMessages: [
-    "Pelukan dan ciumanmu sudah sampai ke Elvan 🥹💕",
+    "Pelukan hangatmu sudah sampai ke Elvan 🥹💕",
     "Elvan merasakan hangatnya peluk dari Cia 🤗💖",
-    "Ciumannya sampai! Elvan senyum-senyum sendiri 💋✨",
-    "Terima kasih, sayang. Aku sayang kamu juga 🥰❤️",
-    "Peluk erat sudah diterima! Tidak mau dilepas 🫂💕",
+    "Peluk erat dari Cia sudah diterima! Nggak mau dilepas 🫂💕",
+    "Terima kasih pelukannya, sayang. Nyaman banget 🥰❤️",
+    "Pelukan dari Cia bikin semua rasa capek Elvan langsung hilang 🌸✨",
   ],
   closingReplayButton: "Putar ulang dari awal 🔁",
 
