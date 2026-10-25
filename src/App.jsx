@@ -6,6 +6,7 @@ import Reasons from "./components/Reasons";
 import Gallery from "./components/Gallery";
 import Letter from "./components/Letter";
 import BirthdayCake from "./components/BirthdayCake";
+import Coupons from "./components/Coupons";
 import Closing from "./components/Closing";
 import MusicPlayer from "./components/MusicPlayer";
 import FloatingHearts from "./components/FloatingHearts";
@@ -123,7 +124,21 @@ export default function App() {
             transition={pageTransition}
             className="min-h-[100dvh] flex items-center justify-center"
           >
-            <BirthdayCake onNext={() => goTo("closing")} />
+            <BirthdayCake onNext={() => goTo("coupons")} />
+          </motion.div>
+        );
+      case "coupons":
+        return (
+          <motion.div
+            key="coupons"
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={pageTransition}
+            className="min-h-[100dvh]"
+          >
+            <Coupons onNext={() => goTo("closing")} />
           </motion.div>
         );
       case "closing":
